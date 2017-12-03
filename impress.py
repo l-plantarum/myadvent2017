@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import time
 import urllib.parse
 import sys
@@ -11,7 +13,9 @@ from selenium.webdriver.common.by import By
 
 options = Options()
 
-# ヘッドレスモードを有効にする（次の行をコメントアウトすると画面が表示される）。options.add_argument('--headless')
+# ヘッドレスモードを有効にする
+
+options.add_argument('--headless')
 
 # ChromeのWebDriverオブジェクトを作成する。
 driver = webdriver.Chrome(chrome_options=options)
@@ -47,6 +51,3 @@ for page in range(2,12):
 
 f.close()
 driver.quit()  # ブラウザを終了する。
-
-
-
