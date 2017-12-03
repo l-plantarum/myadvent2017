@@ -3,35 +3,36 @@
 import sys
 import ssl
 import os
+import codecs
 import urllib.request
 from bs4 import BeautifulSoup
 
-# ‘æˆêˆø”‚ªƒtƒ@ƒCƒ‹–¼
+# ç¬¬ä¸€å¼•æ•°ãŒãƒ•ã‚¡ã‚¤ãƒ«å
 keyword = sys.argv[1]
 
 seq = 1
 
 with open(keyword, 'r') as f:
 
-	# ‘æˆêˆø”‚É.dir‚ğ•t‰Á‚µ‚½–¼‘O‚ÌƒfƒBƒŒƒNƒgƒŠ‚ğŒ@‚é
+	# ç¬¬ä¸€å¼•æ•°ã«.dirã‚’ä»˜åŠ ã—ãŸåå‰ã®ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã‚’æ˜ã‚‹
 	os.mkdir(keyword + '.dir')
 	
 	for it in f:
-		# ‰üsƒR[ƒh‚ğíœ
+		# æ”¹è¡Œã‚³ãƒ¼ãƒ‰ã‚’å‰Šé™¤
 		url = it.replace('\n', '').replace('\r','')
 		
-		# ‚±‚±‚ÌƒhƒƒCƒ“‚ÍŠO‚ÌƒTƒCƒg‚É”ò‚Î‚³‚ê‚é‚Ì‚ÅƒJƒbƒg
+		# ã“ã“ã®ãƒ‰ãƒ¡ã‚¤ãƒ³ã¯å¤–ã®ã‚µã‚¤ãƒˆã«é£›ã°ã•ã‚Œã‚‹ã®ã§ã‚«ãƒƒãƒˆ
 		if (url.find('https://ad.impress.co.jp/special/') == 0):
 			continue
 			
-		print(seq)
 		print(url)
 			
-		# URL‚Ì’†g‚ğƒfƒBƒŒƒNƒgƒŠ‚Ì‰º‚Ì˜A”Ô‚Ìƒtƒ@ƒCƒ‹‚É“f‚­
-		f = open(keyword + '.dir/' + str(seq), 'w')
+		# URLã®ä¸­èº«ã‚’ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã®ä¸‹ã®é€£ç•ªã®ãƒ•ã‚¡ã‚¤ãƒ«ã«åã
+		f = codecs.open(keyword + '.dir/' + str(seq), 'w', 'utf_8', 'ignore')
 		resp = urllib.request.urlopen(url)
 		src = resp.read()
 		soup = BeautifulSoup(src, 'lxml')
+		# <article>ãŒãªã‘ã‚Œã°<div id="article">é…ä¸‹ã®pã‚¿ã‚°ã®ãƒ†ã‚­ã‚¹ãƒˆ
 		article =  soup.article
 		if article == None:
 			article = soup.find_all("div", id="article")
