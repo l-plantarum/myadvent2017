@@ -1,0 +1,47 @@
+DevTools listening on ws://127.0.0.1:12590/devtools/browser/c8c7da1c-e368-4c06-9a3c-318353587b41
+[1203/212805.009:ERROR:browser_gpu_channel_host_factory.cc(108)] Failed to launch GPU process.
+
+無視してOK
+
+suto apt-get update
+sudo apt install make
+sudo apt install g++
+
+./configure
+
+
+sudo apt autoremove
+sudo apt install python3
+sudo apt install python-pip
+
+いっぱいpython2.7で出てくるから不安
+pip install --upgrade pip
+pip install python3-mecab
+sudo ldconfig
+
+結局 mecab-python-0.996の下でsetup.pyを実行
+
+sudo pip install gensim
+
+
+https://chromedriver.storage.googleapis.com/index.html?path=2.33/
+Windows 32ビット版をAnaconda3直下に置いた
+
+./configure -with-charset=utf8
+
+$ python similars.py Amazon
+(u'glo', '\t', 0.6908960342407227)
+(u'\u969b\u7acb\u3064', '\t', 0.6844639778137207)
+(u'\u30bf\u30c3\u30c1\u30c7\u30a3\u30b9\u30d7\u30ec\u30a4', '\t', 0.6651321649551392)
+
+NEC-Google
+パーソナルコンピュータ
+フィールディング
+シェアードサービス
+太田
+土屋
+・漢字を漢字として読みたい
+・漢字の企業も足し引き出来るようにしたい
+
+
+
