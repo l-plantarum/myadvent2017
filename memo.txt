@@ -1,4 +1,4 @@
-DevTools listening on ws://127.0.0.1:12590/devtools/browser/c8c7da1c-e368-4c06-9a3c-318353587b41
+sudoDevTools listening on ws://127.0.0.1:12590/devtools/browser/c8c7da1c-e368-4c06-9a3c-318353587b41
 [1203/212805.009:ERROR:browser_gpu_channel_host_factory.cc(108)] Failed to launch GPU process.
 
 無視してOK
@@ -43,5 +43,6 @@ NEC-Google
 ・漢字を漢字として読みたい
 ・漢字の企業も足し引き出来るようにしたい
 
-
+sudo apt install python3-pip
+suto pip3 install gensim
 
