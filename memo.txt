@@ -134,3 +134,8 @@ weak
 katsumi@home-PC:~/advent2017$
 
 
+
+484でささる
+http://itpro.nikkeibp.co.jp/atcl/column/17/091500382/092000018/?rt=nocntでささる
+有料記事は構造が違う
+<div class="induction">があるやつはそこで終われ
