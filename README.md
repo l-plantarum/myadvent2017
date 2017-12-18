@@ -9,5 +9,5 @@
 - word2vec.py 指定したmecab出力ファイルを読んでモデルをmodelファイルに出力する
 - similars.py modelファイルを読んで指定した語に類似する語トップ10を出力する
 - strength.py modelファイルを読んで第一引数 - 第二引数をstrength、第二引数 - 第一引数をweakとして表示する
-- strength2.py modelファイルを読んで第一引数+第二引数-第三引数-第四引数をstrength, 第一引数+第二引数-第三引数をweakとして表示する
+- strength2.py modelファイルを読んで第一引数+第二引数-第三引数-第四引数をstrength, 第一引数+第二引数-第三引数-第四引数をweakとして表示する
 - strength3.py modelファイルを読んで第一引数+第二引数-第三引数をstrength, 第一引数+第二引数-第三引数をweakとして表示する
